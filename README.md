@@ -209,7 +209,7 @@ Content-Length: 14
 Hello, World!
 ```
 
-The `Date` header is set automatically by Node's `http` module on every response and varies with the time at which the response is generated. The `Content-Length: 14` value corresponds to `len("Hello, World!\n") = 14` bytes (twelve printable characters in `Hello, World!` plus the comma, the space, the exclamation point, and the trailing newline).
+The `Date` header is set automatically by Node's `http` module on every response and varies with the time at which the response is generated. The `Content-Length: 14` value corresponds to `len("Hello, World!\n") = 14` bytes (ten letters — `H`, `e`, `l`, `l`, `o`, `W`, `o`, `r`, `l`, `d` — plus the comma, the space, the exclamation point, and the trailing newline).
 
 To demonstrate that the response is identical regardless of method or path, the following alternative request produces the same response body:
 
