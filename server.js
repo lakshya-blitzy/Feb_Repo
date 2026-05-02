@@ -5,7 +5,7 @@
  *              didactic reference implementation of the canonical Node.js
  *              HTTP-server idiom: import the core `http` module, create a server
  *              with an inline request handler, and bind it to a hostname/port
- *              with a one-shot startup callback.
+ *              with a one-shot listen callback.
  * @author Hello-World Reference Implementation
  */
 
@@ -68,10 +68,9 @@ const server = http.createServer((req, res) => {
 
 /**
  * Activate the server: bind the configured listener socket to
- * `${hostname}:${port}` and register a one-shot startup callback. The third
- * argument is the listen callback, which fires exactly once after the bind
- * succeeds; it writes a single human-readable readiness line to stdout to
- * confirm that the server is reachable.
+ * `${hostname}:${port}` and register a one-shot listen callback that fires
+ * exactly once after the bind succeeds; it writes a single human-readable
+ * readiness line to stdout to confirm that the server is reachable.
  *
  * @returns {void}
  */
