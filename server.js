@@ -49,11 +49,11 @@ const port = 3000;
  * headers, and body are all ignored), so every request — regardless of HTTP
  * method or URL path — receives the same response.
  *
- * @type {import('http').Server}
- * @param {import('http').IncomingMessage} req - The inbound HTTP request
- *        object. Not read by this handler; all request metadata is ignored.
- * @param {import('http').ServerResponse} res - The HTTP response object used
- *        to emit the deterministic greeting back to the client.
+ * @type {http.Server}
+ * @param {http.IncomingMessage} req - The inbound HTTP request object. Not
+ *        read by this handler; all request metadata is ignored.
+ * @param {http.ServerResponse} res - The HTTP response object used to emit
+ *        the deterministic greeting back to the client.
  * @returns {void}
  */
 const server = http.createServer((req, res) => {
